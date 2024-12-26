@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+    integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+</head>
+
+<body>
+  <header>
+    <nav class="fixed">
+      <div class="container">
+        <!-- Brand Logo -->
+        <div class="brand-img">
+          <img src="IMG/4279.svg" alt="KFC Logo">
+        </div>
+
+        <!-- Navigation Menu -->
+        <ul class="nav-menu">
+          <li><a href="#">MENYU</a></li>
+          <li><a href="#">RESTORANLAR</a></li>
+          <li>
+            <img src="https://kfc.com.uz/admin/files/5234.png" alt="Halal Certification" class="header-icon">
+          </li>
+          <li><a href="#">HOZIR BUYURTMA BERISH</a></li>
+          <span class="phone-icon">
+            <a href="#"><i class="fa-solid fa-phone-volume"></i></a>
+            <span class="phone-number">+998 78 129 70 00</span>
+          </span>
+          <span class="auth-menu">
+            <a href="#">
+              <!-- Font Awesome User Icon for login/registration -->
+              <i class="fa-solid fa-user" style="color: #2f322c;"></i>
+            </a>
+            <a href="#" class="login-register">Kirish / Ro'yxatdan O'tish</a>
+          </span>
+        </ul>
+
+        <!-- Language Dropdown -->
+        <div class="dropdown">
+          <button class="dropbtn">O'zbek</button>
+          <div class="dropdown-content">
+            <a href="#" onclick="changeLanguage('en')">English</a>
+            <a href="#" onclick="changeLanguage('ru')">Русский</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div class="slide-img"></div>
+    <!-- section 1 -->
+    <section>
+      <!-- Tugmalar bo'limi -->
+        <div class="all-section's">
+          <div class="button-group" style="margin-left: 800px;">
+            <!-- Radio Button for "Tavsiya etiladi" -->
+             <div id="recommendationButton">
+              <input type="radio" id="recommend" name="option" hidden />
+              <label for="recommend" class="button">Tavsiya etiladi</label>
+            </div>
+            
+            <!-- Radio Button for "Combo" -->
+              <div id="comboButton">
+              <input type="radio" id="combo" name="option" hidden />
+              <label for="combo" class="button">Combo</label>    
+              </div>  
+          </div>
+          <div class="div-card">
+            <!-- Tavsiya etiladi bo'limi -->
+            <div id="recommendation" class="card-container">
+              <div class="card">
+                <img src="IMG/medium_4476.jpg" alt="Chizburger De Lyuks">
+                <div class="card-content">
+                  <h3 class="card-title">CHIZBURGER DE LYUKS</h3>
+                  <p class="card-description">Xantalli sous, ketchup, original panirovkada tovuq go'shti, piyoz...</p>
+                  <button class="card-button">23 000 UZS</button>
+                  <button data-toggle="modal" data-target="#customizerModal" class="customize-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                      viewBox="0 0 16 16">
+                      <path
+                        d="M15.502 1.94a1.5 1.5 0 0 0-2.121 0L10.854 4.467l2.68 2.68 2.527-2.527a1.5 1.5 0 0 0 0-2.121l-.559-.559zM10.854 5.173l-8.72 8.72a.5.5 0 0 0-.121.196l-1.528 4.108a.5.5 0 0 0 .616.615l4.107-1.528a.5.5 0 0 0 .196-.121l8.72-8.72-2.67-2.67z">
+                      </path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="card">
+                <img src="IMG/medium_5349.jpg" alt="Tvister Kebab">
+                <div class="card-content">
+                  <h3 class="card-title">TVISTER KEBAB ORIGINAL</h3>
+                  <p class="card-description">Fri kartoshkasi, salatning qarsildoq barglari, yangi tomatlar...</p>
+                  <button class="card-button">28 000 UZS</button>
+                  <button data-toggle="modal" data-target="#customizerModal" class="customize-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                      viewBox="0 0 16 16">
+                      <path
+                        d="M15.502 1.94a1.5 1.5 0 0 0-2.121 0L10.854 4.467l2.68 2.68 2.527-2.527a1.5 1.5 0 0 0 0-2.121l-.559-.559zM10.854 5.173l-8.72 8.72a.5.5 0 0 0-.121.196l-1.528 4.108a.5.5 0 0 0 .616.615l4.107-1.528a.5.5 0 0 0 .196-.121l8.72-8.72-2.67-2.67z">
+                      </path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="card">
+                <img src="IMG/medium_5124.jpg" alt="Big Sanders Burger">
+                <div class="card-content">
+                  <h3 class="card-title">BIG SANDERS BURGER</h3>
+                  <p class="card-description">Original Big Sanders burger – nihoyatda katta va ishtahaochar!</p>
+                  <button class="card-button">37 000 UZS</button>
+                  <button data-toggle="modal" data-target="#customizerModal" class="customize-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                      viewBox="0 0 16 16">
+                      <path
+                        d="M15.502 1.94a1.5 1.5 0 0 0-2.121 0L10.854 4.467l2.68 2.68 2.527-2.527a1.5 1.5 0 0 0 0-2.121l-.559-.559zM10.854 5.173l-8.72 8.72a.5.5 0 0 0-.121.196l-1.528 4.108a.5.5 0 0 0 .616.615l4.107-1.528a.5.5 0 0 0 .196-.121l8.72-8.72-2.67-2.67z">
+                      </path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="card">
+                <img src="IMG/medium_4476.jpg" alt="Shef Tauer Achchiq">
+                <div class="card-content">
+                  <h3 class="card-title">SHEF TAUER ACHCHIQ</h3>
+                  <p class="card-description">“Burger” sousi, Achchiq tolqinda sersuv file, xashbraun, pishloq
+                    bo‘lagi...
+                  </p>
+                  <button class="card-button">28 000 UZS</button>
+                  <button data-toggle="modal" data-target="#customizerModal" class="customize-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                      viewBox="0 0 16 16">
+                      <path
+                        d="M15.502 1.94a1.5 1.5 0 0 0-2.121 0L10.854 4.467l2.68 2.68 2.527-2.527a1.5 1.5 0 0 0 0-2.121l-.559-.559zM10.854 5.173l-8.72 8.72a.5.5 0 0 0-.121.196l-1.528 4.108a.5.5 0 0 0 .616.615l4.107-1.528a.5.5 0 0 0 .196-.121l8.72-8.72-2.67-2.67z">
+                      </path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Combo bo'limi -->
+            <div id="combo" class="card-container" style="display: none;">
+              <div class="card">
+                <img src="IMG/medium_5431.jpg" alt="KFC Friends Box">
+                <div class="card-content">
+                  <h3 class="card-title">Frends boks assorti</h3>
+                  <p class="card-description">Bir Boksda maksimal miqdorda mazali tovuqcha: 5 ta mazali oyoq...</p>
+                  <button class="card-button">184 000 UZS</button>
+                  <button data-toggle="modal" data-target="#customizerModal" class="customize-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                      viewBox="0 0 16 16">
+                      <path
+                        d="M15.502 1.94a1.5 1.5 0 0 0-2.121 0L10.854 4.467l2.68 2.68 2.527-2.527a1.5 1.5 0 0 0 0-2.121l-.559-.559zM10.854 5.173l-8.72 8.72a.5.5 0 0 0-.121.196l-1.528 4.108a.5.5 0 0 0 .616.615l4.107-1.528a.5.5 0 0 0 .196-.121l8.72-8.72-2.67-2.67z">
+                      </path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="card">
+                <img src="IMG/medium_5511.png" alt="KFC Friends Box">
+                <div class="card-content">
+                  <h3 class="card-title">Frends boks assorti</h3>
+                  <p class="card-description">Bir Boksda maksimal miqdorda mazali tovuqcha: 5 ta mazali oyoq...</p>
+                  <button class="card-button">184 000 UZS</button>
+                  <button data-toggle="modal" data-target="#customizerModal" class="customize-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                      viewBox="0 0 16 16">
+                      <path
+                        d="M15.502 1.94a1.5 1.5 0 0 0-2.121 0L10.854 4.467l2.68 2.68 2.527-2.527a1.5 1.5 0 0 0 0-2.121l-.559-.559zM10.854 5.173l-8.72 8.72a.5.5 0 0 0-.121.196l-1.528 4.108a.5.5 0 0 0 .616.615l4.107-1.528a.5.5 0 0 0 .196-.121l8.72-8.72-2.67-2.67z">
+                      </path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="card">
+                <img src="IMG/medium_5425.jpg" alt="KFC Friends Box">
+                <div class="card-content">
+                  <h3 class="card-title">Frends boks assorti</h3>
+                  <p class="card-description">Bir Boksda maksimal miqdorda mazali tovuqcha: 5 ta mazali oyoq...</p>
+                  <button class="card-button">184 000 UZS</button>
+                  <button data-toggle="modal" data-target="#customizerModal" class="customize-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                      viewBox="0 0 16 16">
+                      <path
+                        d="M15.502 1.94a1.5 1.5 0 0 0-2.121 0L10.854 4.467l2.68 2.68 2.527-2.527a1.5 1.5 0 0 0 0-2.121l-.559-.559zM10.854 5.173l-8.72 8.72a.5.5 0 0 0-.121.196l-1.528 4.108a.5.5 0 0 0 .616.615l4.107-1.528a.5.5 0 0 0 .196-.121l8.72-8.72-2.67-2.67z">
+                      </path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="card">
+                <img src="IMG/medium_5432.jpg" alt="KFC Friends Box">
+                <div class="card-content">
+                  <h3 class="card-title">Frends boks assorti</h3>
+                  <p class="card-description">Bir Boksda maksimal miqdorda mazali tovuqcha: 5 ta mazali oyoq...</p>
+                  <button class="card-button">184 000 UZS</button>
+                  <button data-toggle="modal" data-target="#customizerModal" class="customize-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                      viewBox="0 0 16 16">
+                      <path
+                        d="M15.502 1.94a1.5 1.5 0 0 0-2.121 0L10.854 4.467l2.68 2.68 2.527-2.527a1.5 1.5 0 0 0 0-2.121l-.559-.559zM10.854 5.173l-8.72 8.72a.5.5 0 0 0-.121.196l-1.528 4.108a.5.5 0 0 0 .616.615l4.107-1.528a.5.5 0 0 0 .196-.121l8.72-8.72-2.67-2.67z">
+                      </path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+    </section>
+
+  </main>
+  <script>
+    // Buttonlarni tanlash
+    const recommendationButton = document.getElementById('recommendationButton');
+    const comboButton = document.getElementById('comboButton');
+
+    // Kartalar konteynerlarini tanlash
+    const recommendationContainer = document.getElementById('recommendation');
+    const comboContainer = document.getElementById('combo');
+
+    // "Tavsiya etiladi" tugmasi bosilganda
+    recommendationButton.addEventListener('click', () => {
+      recommendationContainer.style.display = 'flex'; // Kartalarni ko'rsatish
+      comboContainer.style.display = 'none'; // Combo kartalarni yashirish
+    });
+
+    // "Combo" tugmasi bosilganda
+    comboButton.addEventListener('click', () => {
+      comboContainer.style.display = 'flex'; // Combo kartalarni ko'rsatish
+      recommendationContainer.style.display = 'none'; // Tavsiya etiladi kartalarni yashirish
+    });
+  </script>
+</body>
+
+</html>
