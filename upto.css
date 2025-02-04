@@ -4,33 +4,39 @@
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
+
 .card {
     display: flex;
     align-items: center;
     background: #fff;
-    border-radius: 16px;
+    border-radius: 34px;
     padding: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     max-width: 600px;
 }
+
 .card img {
     width: 120px;
     height: auto;
     margin-right: 15px;
 }
+
 .card-content {
     flex: 1;
 }
+
 .card-content h3 {
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 8px;
 }
+
 .card-content p {
     font-size: 14px;
     color: #555;
     margin-bottom: 12px;
 }
+
 .card-content .btn {
     display: inline-block;
     background: #E4002B;
@@ -39,4 +45,73 @@
     padding: 10px 20px;
     border-radius: 20px;
     text-decoration: none;
+    width: 150px;
+    text-align: center;
+}
+
+.card {
+    display: flex;
+    background: white;
+    border-radius: 34px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 500px;
+    align-items: center;
+}
+
+.burger-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+.card-content {
+    flex: 1;
+}
+
+.card-content h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.card-content p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #555;
+}
+
+.card-actions {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.edit-btn {
+    background: #FFD1D1;
+    border: none;
+    padding: 10px;
+    border-radius: 34px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 10px;
+    color: #E4002B;
+    width: 80px;
+}
+
+.price-btn {
+    background: #E4002B;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    width: 159px;
+    text-align: center;
 }
