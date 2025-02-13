@@ -1,0 +1,592 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Navbar Styling */
+nav {
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #FFFFFF;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.brand-img img {
+    width: 90px;
+    cursor: pointer;
+}
+
+/* Navigation Menu */
+.nav-menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li a {
+    background-color: #E4002B;
+    text-decoration: none;
+    color: #fff;
+    padding: 8px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border-radius: 34px;
+}
+
+.header-icon {
+    width: 120px;
+    height: auto;
+    border-radius: 34px;
+}
+
+/* Phone Icon */
+.phone-icon {
+    position: relative;
+}
+
+.phone-icon i {
+    font-size: 20px;
+    color: #2F322C;
+}
+
+.phone-number {
+    display: none;
+    position: absolute;
+    top: 35px;
+    left: 0;
+    background-color: white;
+    color: #E4002B;
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    font-weight: bold;
+    white-space: nowrap;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.phone-icon:hover .phone-number {
+    display: block;
+}
+
+/* Profile and Login/Register */
+.auth-menu {
+    position: relative;
+}
+
+.auth-menu .login-register {
+    display: none;
+    position: absolute;
+    top: 35px;
+    left: 0;
+    background-color: #fff;
+    color: #E4002B;
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    font-weight: bold;
+    white-space: nowrap;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.auth-menu:hover .login-register {
+    display: block;
+}
+
+.profile-icon {
+    transition: fill 0.3s ease;
+}
+
+/* Language Dropdown Styling */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-left: -280px;
+}
+
+.dropbtn {
+    background-color: #2F322C;
+    color: white;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 34px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+}
+
+.dropdown a:hover {
+    background-color: #ddd;
+}
+
+.slide-img {
+    background-image: url(../IMG/5401.jpg);
+    height: 700px;
+    width: 1500px;
+    margin-left: 200px;
+    margin-top: 150px;
+    background-size: cover;
+    border-radius: 34px;
+}
+
+.button-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 30px;
+    display: inline-block;
+}
+
+.button {
+    padding: 10px 20px;
+    border: 1px solid #000000;
+    font-size: 16px;
+    border-radius: 36px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #ffffff;
+    color: #000000;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+input:checked+.button {
+    background-color: #e4002b;
+    color: #ffffff;
+}
+
+input:not(:checked)+.button {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.card {
+    width: 300px;
+    border-radius: 36px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-color: #fff;
+    display: inline-block;
+}
+
+.card2 {
+    float: left;
+    width: 15%;
+    margin: 10px;
+}
+
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 16px;
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 0 8px;
+    color: #333;
+}
+
+.card-description {
+    font-size: 14px;
+    color: #666;
+    margin: 0 0 16px;
+}
+
+.card-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    background-color: #fff;
+    border-top: 1px solid #eee;
+}
+
+.edit-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #f8d7da;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.edit-icon:hover {
+    background-color: #f5c2c7;
+}
+
+.edit-icon svg {
+    fill: #e4002b;
+    width: 20px;
+    height: 20px;
+}
+
+.price-button {
+    background-color: #e4002b;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.price-button:hover {
+    background-color: #c80025;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card-price {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.card-description {
+    font-size: 14px;
+    color: #777;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.card-button {
+    display: inline-block;
+    background-color: #e4002b;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+    border: none;
+}
+
+.card-button:hover {
+    background-color: #c30023;
+}
+
+.section {
+    display: none;
+}
+
+.section.active {
+    display: block;
+}
+
+.customize-button {
+    background-color: #E4002B;
+    color: #FFFFFF;
+    border: none;
+    padding: 8px 12px;
+    margin-top: 8px;
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.customize-button svg {
+    fill: #FFFFFF;
+    width: 16px;
+    height: 16px;
+}
+
+.customize-button:hover {
+    background-color: #BF0023;
+}
+
+.value {
+    display: inline-block;
+}
+
+.value2 {
+    display: inline-block;
+}
+
+.button-group {
+    margin-top: 50px;
+}
+
+.card-container {
+    display: inline-block;
+}
+
+.div-card {
+    margin-top: 50px;
+    margin-left: 300px;
+}
+
+.cot {
+    display: inline-block;
+    background-color: #e4002b;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+    border: none;
+    margin-top: 50px;
+    margin-left: 460px;
+}
+
+.brand-div {
+    background-image: url(../IMG/4274.jpeg);
+    background-size: cover;
+    width: 600px;
+    height: 600px;
+    border-radius: 36px;
+    display: inline-block;
+    margin: 120px;
+    margin-left: -50px;
+    margin-top: 50px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), no-repeat center/cover url(https://kfc.com.uz/admin/files/4274.jpeg);
+}
+
+.text {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
+    text-align: center;
+    padding-top: 300px;
+}
+
+.data {
+    margin-bottom: -280px;
+}
+
+.btn-aqsh {
+    background-color: #e4002b;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+    border: none;
+    margin-left: 240px;
+}
+
+.brand-div2 {
+    background-image: url(../IMG/4308.jpeg);
+    background-size: cover;
+    width: 600px;
+    height: 600px;
+    border-radius: 36px;
+    display: inline-block;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), no-repeat center/cover url(https://kfc.com.uz/admin/files/4308.jpeg);
+}
+
+.text2 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
+    text-align: center;
+    padding-top: 300px;
+}
+
+.data2 {
+    margin-bottom: -280px;
+}
+
+.btn-aqsh2 {
+    background-color: #e4002b;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+    border: none;
+    margin-left: 240px;
+}
+
+.line {
+    border-top: 1px solid gray;
+    width: 65%;
+    margin-left: -300px;
+}
+
+.imgg {
+    margin-left: 595px;
+    margin-top: -60px;
+}
+
+.line2 {
+    border-top: 1px solid gray;
+    width: 65%;
+    margin-top: -65px;
+    margin-left: 775px;
+}
+
+.social-media {
+    display: flex;
+    margin-bottom: 20px;
+    margin-left: 200px;
+}
+
+.social-media h4 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.social-media .icon-f a {
+    margin: 0 5px;
+    display: inline-block;
+}
+
+.icon-f img {
+    width: 30px;
+    height: 30px;
+}
+
+.mad {
+    margin-left: 700px;
+    margin-top: -50px;
+}
+
+.s {
+    margin-top: -50px;
+}
+
+.mar {
+    margin-left: 230px;
+}
+
+.instruction {
+    display: inline-block;
+    margin-right: 30px;
+    vertical-align: top;
+    margin-bottom: 100px;
+}
+
+.instruction h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.instruction a {
+    display: block;
+    font-size: 14px;
+    color: #000;
+    text-decoration: none;
+    margin-bottom: 5px;
+    transition: color 0.2s ease-in-out;
+}
+
+.bottom-footer {
+    background-color: #E4002B;
+    height: 120px;
+}
+
+.let {
+    display: inline-block;
+    margin-left: 400px;
+    color: #FFFFFF;
+}
+
+.square-div {
+    background-color: #FFFFFF;
+    width: 60px;
+    height: 50px;
+    display: inline-block;
+    margin-left: 20px;
+    margin-top: 32px;
+    margin-bottom: -3px;
+}
+
+.square-div1 {
+    background-color: #FFFFFF;
+    width: 60px;
+    height: 50px;
+    display: inline-block;
+    margin-left: 870px;
+    margin-top: 32px;
+    margin-bottom: -3px;
+}
