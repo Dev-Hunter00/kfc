@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <header>
+        <nav class="fixed">
+            <div class="container">
+                <!-- Brand Logo -->
+                <div class="brand-img">
+                    <a href="KFC1.HTML"><img src="IMG/4279.svg" alt="KFC Logo"></a>
+                </div>
+
+                <!-- Navigation Menu -->
+                <ul class="nav-menu">
+                    <li><a href="KFC2.HTML">MENYU</a></li>
+                    <li><a href="#">RESTORANLAR</a></li>
+                    <span>
+                        <a href="#">
+                            <img src="https://kfc.com.uz/admin/files/5234.png" alt="Halal Certification"
+                            class="header-icon">
+                        </a>
+                    </span>
+                    <li><a href="#">HOZIR BUYURTMA BERISH</a></li>
+                    <span class="phone-icon">
+                        <a href="#"><i class="fa-solid fa-phone-volume"></i></a>
+                        <span class="phone-number">+998 78 129 70 00</span>
+                    </span>
+                    <span class="auth-menu">
+                        <a href="signup.html">
+                            <!-- Font Awesome User Icon for login/registration -->
+                            <i class="fa-solid fa-user" style="color: #2f322c;"></i>
+                        </a>
+                        <a href="#" class="login-register">Kirish / Ro'yxatdan O'tish</a>
+                    </span>
+                </ul>
+
+                <!-- Language Dropdown -->
+                <div class="dropdown">
+                    <button class="dropbtn">O'zbek</button>
+                    <div class="dropdown-content">
+                        <a href="#" onclick="changeLanguage('en')">English</a>
+                        <a href="#" onclick="changeLanguage('ru')">Русский</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="slide-img"></div>
+        <!-- section 1 -->
+        <section>
+            <!-- Tugmalar bo'limi -->
+            <div class="all-section's">
+                <div class="button-group" style="margin-left: 800px;">
+                    <!-- Radio Button for "Tavsiya etiladi" -->
+                    <input type="radio" id="recommend" name="option" hidden />
+                    <label for="recommend" class="button">Tavsiya etiladi</label>
+                    <!-- Radio Button for "Combo" -->
+                    <input type="radio" id="combo" name="option" hidden />
+                    <label for="combo" class="button">Combo</label>
+                </div>
+            </div>
+        </section>
+        <div class="div-card">
+            <!-- Tavsiya etiladi bo'limi -->
+            <div id="recommendation" class="card-container">
+                <div class="card">
+                    <img src="IMG/medium_4476.jpg" alt="Chizburger De Lyuks">
+                    <div class="card-content">
+                        <h3 class="card-title">CHIZBURGER DE LYUKS</h3>
+                        <p class="card-description">Xantalli sous, ketchup, original panirovkada tovuq go'shti, piyoz...
+                        </p>
+                        <button class="card-button">23 000 UZS</button>
+                        <button data-toggle="modal" data-target="#customizerModal" class="customize-button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                viewBox="0 0 16 16">
+                                <path
+                                    d="M15.502 1.94a1.5 1.5 0 0 0-2.121 0L10.854 4.467l2.68 2.68 2.527-2.527a1.5 1.5 0 0 0 0-2.121l-.559-.559zM10.854 5.173l-8.72 8.72a.5.5 0 0 0-.121.196l-1.528 4.108a.5.5 0 0 0 .616.615l4.107-1.528a.5.5 0 0 0 .196-.121l8.72-8.72-2.67-2.67z">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="IMG/medium_5349.jpg" alt="Tvister Kebab">
+                    <div class="card-content">
+                        <h3 class="card-title">TVISTER KEBAB ORIGINAL</h3>
+                        <p class="card-description">Fri kartoshkasi, salatning qarsildoq barglari, yangi tomatlar...</p>
+                        <button class="card-button">28 000 UZS</button>
+                        <button data-toggle="modal" data-target="#customizerModal" class="customize-button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                viewBox="0 0 16 16">
+                                <path
+                                    d="M15.502 1.94a1.5 1.5 0 0 0-2.121 0L10.854 4.467l2.68 2.68 2.527-2.527a1.5 1.5 0 0 0 0-2.121l-.559-.559zM10.854 5.173l-8.72 8.72a.5.5 0 0 0-.121.196l-1.528 4.108a.5.5 0 0 0 .616.615l4.107-1.528a.5.5 0 0 0 .196-.121l8.72-8.72-2.67-2.67z">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <!-- Combo bo'limi -->
+                <div class="card-container">
+                    <!-- Karta 1 -->
+                    <div class="card">
+                        <img src="IMG/medium_5427.jpg" alt="Lanchboks">
+                        <div class="card-content">
+                            <h3 class="card-title">Lanchboks 30 000 so‘mga 5ta</h3>
+                            <p class="card-description">
+                                Mazali Longer bilan 5 tasi 30 000 lik Lanchboks - tamaddi va tez tushlik uchun ideal
+                                tanlov!
+                            </p>
+                            <button class="card-button">Tanlov</button>
+                        </div>
+                    </div>
+                    <!-- Karta 2 -->
+                    <div class="card">
+                        <img src="IMG/medium_5428.jpg" alt="Twister">
+                        <div class="card-content">
+                            <h3 class="card-title">Lanchboks 30 000 so‘mga 5ta</h3>
+                            <p class="card-description">
+                                Mazali Twister Junior bilan 5 tasi 30 000 lik Lanchboks - tamaddi va tez tushlik uchun
+                                ideal tanlov!
+                            </p>
+                            <button class="card-button">Tanlov</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <button class="cot">Barcha takliflarni ko'rib chiqish</button>
+                </div>
+
+                <section id="power">
+                    <div class="brand-div">
+                        <h3 class="text data">Bizga o'zingizning fikringizni bildiring</h3>
+                        <p class="text">Biz bilan tajribangizni baholang va bizga yaxshiroq bo'lishga yordam bering.</p>
+                        <button class="btn-aqsh">AQSH NARXI</button>
+                    </div>
+
+                    <div class="brand-div2">
+                        <h3 class="text2 data2">11 tarkibiy mahsulotlar</h3>
+                        <p class="text2">Oziq-ovqatimizni o'zgacha qiladigan narsa.</p>
+                        <button class="btn-aqsh2">ULARNI KASHF ETING</button>
+                    </div>
+                </section>
+
+                <section>
+                    <div class="line">
+                    </div>
+
+                    <div class="imgg">
+                        <img src="IMG/4279.svg" alt="" style="  width: 120px; cursor: pointer;">
+                    </div>
+
+                    <div class="line2">
+                    </div>
+                </section>
+    </main>
+    <footer>
+        <section>
+            <div class="social-media">
+                <h4><i class="fa-solid fa-phone" style="color: #ff0000;"></i>+998 (78) 129 70 00</h4>
+            </div>
+
+            <div class="icon-f">
+                <a href="https://www.facebook.com/KFC.uz" style="text-decoration: none;">
+                    <img src="IMG/4717.svg" alt="" class="mar">
+                </a>
+                <a href="https://www.instagram.com/kfcinuzbekistan/" style="text-decoration: none;">
+                    <img src="IMG/4718.svg" alt="">
+                </a>
+                <a href="https://t.me/kfcuzbekistanofficial">
+                    <img src="IMG/4885.svg" alt="">
+                </a>
+            </div>
+
+            <div class="instruction mad">
+                <h3>Maʼlumot</h3>
+                <a href="#">Tarix</a>
+                <a href="#">11 tarkibiy mahsulotlar!</a>
+                <a href="#">Allergenlar & To'yimli</a>
+                <a href="#">Doʻkonlar</a>
+                <a href="#">HALAL</a>
+            </div>
+            <div class="instruction s">
+                <h3>Yordam kerakmi?</h3>
+                <a href="#">Biz bilan bog’lanish</a>
+                <a href="#">KFC’ga ishga qabul qilish</a>
+                <a href="#">Shartlar va shartlar</a>
+            </div>
+            <div class="instruction s">
+                <h3>Hisob</h3>
+                <a href="#">Tizimga kirish</a>
+                <a href="#">Ro‘yhatdan o‘tish</a>
+                <a href="#">Parolimni unutdim</a>
+            </div>
+        </section>
+        <section>
+            <div class="bottom-footer">
+                <div class="letters">
+                    <p class="let let1">Maxfiylik siyosati</p>
+                    <h4 class="let">© KFC UZ 2025</h4>
+                    <img src="IMG/powered-by-fimble.svg" alt="" class="let">
+                </div>
+                <div class="square-div1">
+                    <span class="square"></span>
+                    <span class="square"></span>
+                    <span class="square"></span>
+                </div>
+                <div class="square-div">
+                    <span class="square"></span>
+                    <span class="square"></span>
+                    <span class="square"></span>
+                </div>
+                <div class="square-div">
+                    <span class="square"></span>
+                    <span class="square"></span>
+                    <span class="square"></span>
+                </div>
+            </div>
+        </section>
+    </footer>
+</body>
+
+</html>
